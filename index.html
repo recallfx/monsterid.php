@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>MonsterId.js</title>
+    <title>MonsterId.php</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <script type="text/javascript" src="build/monsterid.min.js"></script>
 </head>
 <body>
-    <a href="https://github.com/kevingaudin/monsterid.js" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
-    This page demonstrate's an implementation of the MonsterID concept only with browser compatible JavaScript.
-    <hr/>
-    <p>Generate your own monster. Summon him by name:</p>
-    <img id="yourMonster"  class="avatar"/>
-    <br/>
-    <input placeholder="Your monster's name" type="text" id="monstername" onkeyup="MonsterId.getAvatar(this.value, document.getElementById('yourMonster'));"/>
+    <a href="https://github.com/recallfx/monsterid.php" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    This page demonstrate's an implementation of the MonsterID port to PHP.
     <hr/>
     <p>Here come the monsters : <button onclick="addMonsters()">Moar !</button></p>
     <script type="text/javascript">
@@ -22,8 +16,8 @@
             for(var i = monstercount; i < nbMonsters; i++) {
                 var avatar = document.createElement('img');
                 avatar.className = "avatar";
-                document.body.appendChild(avatar);
-                MonsterId.getAvatar("monster" + i, avatar);
+                document.body.appendChild(avatar);                
+				avatar.src = 'http://mbieliau.lt/monsterid?monster=monster' + i;				
                 monstercount++;
             }
         };
